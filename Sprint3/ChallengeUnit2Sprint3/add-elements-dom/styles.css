@@ -1,0 +1,34 @@
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:azure;
+    font-size: 18px;
+    color: black;
+}
+
+h1 {
+    font-size: 36px;
+    color: #2a5e2c;
+
+}
+#agregar {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#agregar:hover {
+    background-color: #45a049;
+}
+
+#agregar:active {
+    background-color: #3e8e41;
+}
+
+#lista {
+    list-style: square;
+    color: #4CAF50;
+}
