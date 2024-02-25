@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Scary';
+  src: url('/fonts/scaryFont.ttf') format('truetype');
+}
+
+body {
+  font-family: Scary, Arial, sans-serif;
+  text-align: center;
+  background-color: papayawhip;
+}
+
+.botonWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.botonWrap img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 3em;
+  color: royalblue;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+/*
+.boton-jugada {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}*/
+
+.boton-jugada {
+  display: block;
+  margin: 0 20px;
+  padding: 5%;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(238, 151, 151);
+}
+.boton-jugada:hover {
+  background-color: lightgoldenrodyellow;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#resultados {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+#contador-usuario {
+  font-size: 1.5em;
+}
+
+#contador-ordenador {
+  font-size: 1.5em;
+}
