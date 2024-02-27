@@ -1,18 +1,140 @@
 /* styles.css */
-body {
-  font-family: Arial, sans-serif;
+@font-face {
+  font-family: 'Netflix';
+  src: url('/fonts/netflixFont.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Machine';
+  src: url('/fonts/chopinFont.ttf') format('truetype');
 }
 
-.genero-container {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  background-color: #f8f8f8;
+body {
+  background-color: #202020;
+}
+
+h1 {
+  font-family: 'Netflix';
+  color: red;
+  font-size: 80px;
+  margin: 5px;
+  margin-left: 7.3%;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-family: 'Netflix';
+  color: whitesmoke;
+  font-size: 40px;
+  margin: 10px;
+  margin-left: 7.2%;
 }
 
+h3 {
+  width: 220px;
+  margin-left: 6%;
+  color: white;
+  font-family: 'Machine';
+  font-size: 19px;
+}
 
+.genero-container {
+  width: 95%;
+  display: inline-block;
+  background-color: #20202000;
+  margin: 10px;
+  padding: 10px;
+}
+
+.genero { 
+  display: flex;
+}
+
+@keyframes changeColor {
+  0% {color: rgb(255, 255, 255);}
+  50% {color: #fa000094;}
+  100% {color: rgba(255, 255, 255, 0.889); }
+}
+
+h2:hover {
+  cursor: pointer;
+  animation: changeColor 3s;
+}
+
+#genero-28 {
+  width: 95%;
+  margin: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  align-content: space-around;
+  justify-content: center;
+}
+
+#genero-28 div {
+  margin: 1%;
+}
+
+#genero-28 div:hover {
+  transform: scale(1.1);
+  transition: 0.3s linear; 
+  background-color: #3f3f3f;
+  border: solid 1px;
+  border-color: rgb(73, 73, 73);
+}
+
+#genero-28 div img{
+  width: 220px;
+  
+}
+
+#genero-53{
+  width: 95%;
+  margin: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  align-content: space-around;
+  justify-content: center;
+}
+
+#genero-53 div {
+  margin: 1%;
+}
+
+#genero-53 div:hover {
+  transform: scale(1.1);
+  transition: 0.3s linear; 
+  background-color: #3f3f3f;
+  border: solid 1px;
+  border-color: rgb(73, 73, 73);
+}
+
+#genero-53 div img{
+  width: 220px;
+}
+
+#genero-12{
+  width: 95%;
+  margin: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  align-content: space-around;
+  justify-content: center;
+}
+
+#genero-12 div {
+  margin: 1%;
+
+}
+#genero-12 div:hover {
+  transform: scale(1.1);
+  transition: 0.3s linear; 
+  background-color: #3f3f3f;
+  border: solid 1px;
+  border-color: rgb(73, 73, 73);
+}
+
+#genero-12 div img{
+  width: 220px;
+  
+}
