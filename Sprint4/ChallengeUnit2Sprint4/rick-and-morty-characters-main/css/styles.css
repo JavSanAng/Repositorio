@@ -75,7 +75,22 @@ table {
 ul {  
   padding-top: 100px;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction:row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
 }
+
+li {
+  border: solid 1px;
+  border-color: rgb(222, 225, 224);
+  padding: 1%;
+  margin: 1%;
+  border-radius: 2%;
+}
+
 
 
 
