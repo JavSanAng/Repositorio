@@ -1,7 +1,11 @@
 import peliculas from "./peliculas.js";
+
+const sectionAction = document.getElementById('genero-28'); 
+const sectionThriller = document.getElementById('genero-53');
+const sectionAdventure = document.getElementById('genero-12');
 const linkImage = 'https://image.tmdb.org/t/p/w500';
 
-const films = (section, films) => {
+function films (section, films) {
     films.forEach(pelicula => {
         // Creo el div donde guardo la info de las pelis
         const divFilm = document.createElement("div");
@@ -22,11 +26,6 @@ const films = (section, films) => {
         section.appendChild(divFilm);
     });
 };
-
-// Crear Secciones Peliculas
-const sectionAction = document.getElementById('genero-28'); 
-const sectionThriller = document.getElementById('genero-53');
-const sectionAdventure = document.getElementById('genero-12');
 
 // Filtrar películas y mostrarlas en las secciones correspondientes
 const arrayThriller = peliculas.filter(pelicula => pelicula.genre_ids.includes(53));

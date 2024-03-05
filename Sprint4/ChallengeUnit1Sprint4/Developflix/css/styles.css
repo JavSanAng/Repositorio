@@ -1,11 +1,12 @@
 /* styles.css */
 @font-face {
   font-family: 'Netflix';
-  src: url('/fonts/netflixFont.otf') format('truetype');
+  src: url('../fonts/netflixFont.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Machine';
-  src: url('/fonts/chopinFont.ttf') format('truetype');
+  src: url('../fonts/cocoFont.ttf') format('truetype');
 }
 
 body {
