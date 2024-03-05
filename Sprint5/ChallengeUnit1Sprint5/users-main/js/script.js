@@ -30,7 +30,7 @@ function showRandomUser (users) {
     users.forEach((user)=> {
         const liUser = document.createElement("li");
         const imgUser = document.createElement("img");
-        imgUser.src = "/ChallengeUnit1Sprint5/users-main/assets/img/" + `${user.id}`+ ".jpeg " ;
+        imgUser.src = "./assets/img/" + `${user.id}`+ ".jpeg "
 
         let {name, username, phone, email,company, address} = user ;
         const userInfo = document.createElement("div");
