@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+}
+.header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    transition: color 1s linear;
+}
+
+.toggleButton {
+    width: 50px;
+    border-radius: 15px;
+    background-color: #d1d1d1;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 1s linear;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #d6f17d;
+    background-image: url(../assets/img/sol.png);
+    background-size: 15px;
+    background-position: center;
+    transition: background-color 0.3s linear;
+}
+
+.night  {
+    transform: translate(30px);
+    background-color: blue;
+    background-image: url(../assets/img/luna.png);
+}
+
+.main {
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.imgHead img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.imgHead article {
+    margin: auto; 
+    max-width: 700px;
+}
+
+.imgHead h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.imgHead p {
+    margin-bottom: 20px;
+}
+
+.darkMode p {
+    color: white;
+}
+
+.darkMode span {
+    color: white;
+}
+
+.darkMode .logo {
+    color: yellow;
+}
+
+.darkMode h1 {
+    color: yellow;
+}
+
+.darkMode .main {
+    background-color: black;
+}
+
+.darkMode .header {
+    background-color: black;
+}
