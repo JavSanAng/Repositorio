@@ -22,8 +22,8 @@ function filterUsers (usersData){
         }
     });
 }
-
 filterUsers(usersData)
+
 const port = process.env.PORT || 1234;
 
 app.get('/', (req,res)=> {
@@ -31,16 +31,19 @@ app.get('/', (req,res)=> {
 });
 
 app.get('/marketing', (req,res) => {
-    console.log(usersMarketing);
+    res.send(usersMarketing);
 })
 
 app.get('/developers', (req,res) => {
+    res.send(usersDevelopers);
 })
 
 app.get('/qas', (req,res) => {
+    res.send(usersQas);
 })
 
 app.get('/ventas', (req,res) => {
+    res.send(usersVentas);
 })
 
 app.use ((req,res)=>{
