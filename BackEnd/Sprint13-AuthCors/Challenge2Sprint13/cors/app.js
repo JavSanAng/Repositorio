@@ -8,6 +8,8 @@ const port = process.env.port || 1234;
 
 const url = `https://rickandmortyapi.com/api/character/`
 
+app.use(cors());
+
 app.get('/characters', async(req,res)=>{
     try{
         const response = await axios.get(url);
@@ -19,14 +21,19 @@ app.get('/characters', async(req,res)=>{
 })
 
 app.get('/character/:name', async(req, res) => {
-    const characterName = req.params['name'].toLocaleLowerCase();
+    const characterName = req.params.name
     const characterUrl = `https://rickandmortyapi.com/api/character/?name=${characterName}`;
     try{
         const response = await axios.get(`${characterUrl}`)
-        const {name, status, species, gender, origin, image} = response.data
-        res.json(data.results)
+        const characterData = response.data.results[0];
+        if (characterData){
+            const {name,status,species,gender,origin,image} = characterData;
+            res.json({name,status,species,gender,origin,image});
+        } else {
+            res.status(404).json({error:'404:Character not found.'})
+        }
     } catch (ERROR) {
-        res.status(404).json({error: '404. Character no encontrado'})
+        res.status(500).json({error: '500. Error Server'})
     }
 })
 
