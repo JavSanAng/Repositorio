@@ -152,3 +152,103 @@ Decide la mejor manera de hacerlo. Sientete libre y toma tus propias decisiones 
 
 - [Jest](https://jestjs.io/docs/getting-started)
 - [TDD](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
+
+
+
+// Tests
+describe('addProduct', () => {
+    beforeEach(() => {
+        resetProducts();
+    });
+
+    test('Should return a product with name and price if a new product is added to the database.', () => {
+        const expected = {
+            id: expect.any(Number),
+            name: 'mac',
+            price: 100
+        };
+        const result = addProduct('mac', 100);
+        expect(result).toMatchObject(expected);
+        expect(products).toContainEqual(expected);
+    });
+
+    test('Should throw an error if one of the parameters is not defined', () => {
+        expect(() => addProduct('ipad')).toThrow('One of the parameters is not defined');
+        expect(() => addProduct(undefined, 50)).toThrow('One of the parameters is not defined');
+    });
+
+    test('Should throw an error if the product already exists in the database', () => {
+        addProduct('iphone', 50);
+        expect(() => addProduct('iphone', 50)).toThrow('This product exists in the database');
+    });
+});
+
+
+
+// El siguiente test que vamos a hacer es el de eliminar un producto. Para ello, vamos a usar la función **removeProduct**. 
+// Esta función recibe un parámetro: el id del producto. Si el producto no existe, la función lanzará un error.
+
+describe('removeProduct', ()=>{
+
+    test('The product ', ()=>{
+        const expected = {
+            id: expect.any(Number)
+        }
+        const result = removeProduct(1);
+        expect(result).toMatchObject(expected);
+        })
+    test ('The product exist in the database',()=>{
+        expect(()=> removeProduct(10000)).toThrow('This product does not exist')
+        })
+    })
+
+// El siguiente test que vamos a hacer es el de obtener un producto. Para ello, vamos a usar la función **getProduct**. 
+// Esta función recibe un parámetro: el id del producto. Devuelve un objeto con los datos del producto. 
+// Si el producto no existe, la función lanzará un error.
+
+describe ('getProduct', ()=>{
+    test('Return an object with the date of the product ', ()=>{
+        const productId = 1;
+        const expectedProduct = {
+            id: 1,
+            name: 'Product',
+            price: 10
+        };
+
+        const product = getProduct(productId);
+        expect(product).toEqual(expectedProduct);
+    })
+    test ('The product exist in the database',()=>{
+        expect(()=> getProduct(10000)).toThrow('This product does not exist')
+        })
+})
+
+// El siguiente test que vamos a hacer es el de actualizar un producto. Para ello, vamos a usar la función **updateProduct**. 
+// Esta función recibe tres parámetros: el id del producto, el nombre del producto y el precio del producto. 
+// Si el producto no existe, la función lanzará un error. Si el nombre o el precio no están definidos, 
+// la función actualizará el producto con los datos que sí estén definidos.
+
+
+describe ('updateProduct', ()=>{
+    test('',()=>{
+        const expected = {
+            id: 1,
+            name: 'Product',
+            price: 10}
+
+        const result = updateProduct(2,'mac',100);
+        expect(result).toMatchObject(expected);
+    })
+
+    test ('The product does not exist in the database',()=>{
+        expect(()=> updateProduct(900,'Shit',13)).toThrow('This product does not exist')
+        })
+
+    test ('Update id and name ',()=>{
+        expect(updateProduct(3,'Sheep')).not.toBeNull();
+        })
+        
+    test ('Update id and price',()=>{
+        expect(updateProduct(901,'',14)).not.toBeNull();
+        })
+})
