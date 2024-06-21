@@ -1,10 +1,10 @@
-import React from "react";
-
+import React from 'react';
+import logo from '../assets/cocretainc.jpg';
 
 function encabezado (){
     return(
         <header>
-            <img src={'Refact\src\assets\cocretainc.jpg'} alt="Logo"/>
+        <img src={logo} alt="Logo de Coquetas INC" style={{ height: '60px' }} />
         </header>
     );
 }

@@ -1,4 +1,4 @@
-// src/components/ListaEmpleados.jsx
+
 import React from "react";
 
 function ListaEmpleados({ empleados }) {
