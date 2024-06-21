@@ -51,6 +51,7 @@ import { useState } from 'react'
 
 function App() {
   const [name, setName] = useState('Sofía');
+  const [newName, setNewName] = useState('');
 
   const changeName = (event) => {
     event.preventDefault();
@@ -71,7 +72,8 @@ function App() {
           Name:
           <input 
             type="text" 
-            name="nameInput" 
+            name="nameInput"
+            onChange={event => setNewName(event.target.value)}
             placeholder='Add a name' 
           />
         </label>
